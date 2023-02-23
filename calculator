@@ -1,0 +1,47 @@
+import java.io.IOException;
+import java.util.Scanner;
+class calculator {
+    public static void main(String args[]){
+        Scanner s = new Scanner(System.in);
+        int a, b;
+        int result = 0;
+        System.out.print("Enter first value: ");
+        a = s.nextInt();
+        System.out.print("Enter second value: ");
+        b = s.nextInt();
+        char op;
+        System.out.print("Enter operator +, -, /, *: ");
+        op = s.next().charAt(0);
+        switch(op){
+            case '+' :
+            {
+                result = a+b;
+                System.out.print("RESULT is: "+ result);
+                break;    
+            } 
+            case '-' :
+            {
+                result = a-b;
+                System.out.print("RESULT is: "+ result);
+                break;    
+            }
+            case '/' :
+            {
+                result = a/b;
+                System.out.print("RESULT is: "+ result);
+                break;    
+            }
+            case '*' :
+            {
+                result = a*b;
+                System.out.print("RESULT is: "+ result);
+                break;    
+            }
+            default :
+            {
+                System.out.print("Please select valid operator. ");
+                break;
+            }
+        }
+    }
+}
